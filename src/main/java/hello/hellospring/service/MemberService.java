@@ -12,13 +12,12 @@ import java.util.Optional;
 
 // 서비스는 비즈니스 의존적인 설계를 해야함 (메서드 명)
 // 기획자와 소통
-@Service // 스프링이 멤버서비스를 알아보고 등록해줌, service도 component
+ // 스프링이 멤버서비스를 알아보고 등록해줌, service도 component
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
     // Dependency Injection
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
